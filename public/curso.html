@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Curso UMSA - PACIUM</title>
+    <!-- Bootstrap 5 CSS (solo para estructura básica) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --azul-umsa: #002855;
+        --azul-tec: #005fa3;
+        --amarillo-umsa: #ffc107;
+        --rojo-umsa: #c8102e;
+        --gris-suave: #f5f5f5;
+        --texto-oscuro: #333333;
+        --blanco: #ffffff;
+      }
+      * {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: var(--gris-suave);
+        color: var(--texto-oscuro);
+      }
+      /* Encabezado */
+      .custom-header {
+        padding: 20px 0;
+        background: linear-gradient(90deg, var(--azul-umsa), var(--rojo-umsa));
+      }
+      .custom-header img {
+        background-color: var(--blanco);
+        border-radius: 8px;
+        padding: 5px;
+      }
+      .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .social-icons svg {
+        width: 60px;
+        height: 60px;
+        margin-left: 15px;
+      }
+      .social-icons svg path {
+        fill: var(--amarillo-umsa);
+      }
+      .social-icons svg:hover path {
+        fill: var(--blanco);
+      }
+      /* Imagenes del logo */
+      .images_logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 0 0 30px;
+      }
+      /* Ocultar encabezado en pantallas pequeñas */
+      @media (max-width: 991px) {
+        .custom-header {
+          display: none;
+        }
+      }
+      /* Navbar */
+      .navbar {
+        background-color: var(--blanco);
+        border-top: 5px solid var(--amarillo-umsa);
+        border-bottom: 3px solid var(--azul-umsa);
+      }
+      .navbar-nav .nav-link {
+        color: var(--azul-umsa);
+        font-weight: bold;
+      }
+      .navbar-nav .nav-link:hover {
+        color: var(--amarillo-umsa);
+      }
+      .navbar-toggler {
+        border: 2px solid var(--azul-umsa);
+        border-radius: 5px;
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23002855' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+      /* Botones */
+      .btn-login {
+        background-color: var(--azul-umsa);
+        border-color: var(--azul-umsa);
+        color: var(--blanco);
+        padding: 5px 15px;
+      }
+      .btn-register {
+        background-color: transparent;
+        border: 2px solid var(--azul-tec);
+        color: var(--texto-oscuro);
+        padding: 5px 15px;
+        margin-left: 10px;
+      }
+      .btn-login:hover,
+      .btn-register:hover {
+        background-color: var(--amarillo-umsa);
+        color: var(--azul-umsa);
+        border-color: var(--amarillo-umsa);
+      }
+      @media (max-width: 991px) {
+        .btn-login,
+        .btn-register {
+          padding: 5px 10px;
+          font-size: 14px;
+        }
+      }
+      /* Contenido */
+      .main-title {
+        color: var(--azul-tec);
+        font-weight: bold;
+      }
+      .content-section {
+        padding: 40px 20px;
+        background-color: var(--blanco);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        margin-bottom: 40px;
+      }
+      .module-card {
+        background: var(--blanco);
+        border: 2px solid var(--azul-umsa);
+        border-left: 8px solid var(--rojo-umsa);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+        transition: 0.3s;
+      }
+      .module-card:hover {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        transform: translateY(-3px);
+      }
+      .module-card h4 {
+        color: var(--azul-umsa);
+        font-weight: bold;
+      }
+      .module-card aside {
+        background: var(--amarillo-umsa);
+        color: var(--azul-umsa);
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      .requerimientos {
+        color: var(--rojo-umsa);
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .module-card h6 {
+        color: var(--rojo-umsa);
+        font-weight: bold;
+      }
+      p {
+        text-align: justify;
+      }
+      /* Estilos para las listas de módulos */
+      .module-card ol,
+      .module-card ul {
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+      .module-card ol li,
+      .module-card ul li {
+        color: var(--azul-tec);
+        cursor: pointer;
+        transition: color 0.3s;
+        margin-bottom: 10px;
+      }
+      .module-card ol li:hover,
+      .module-card ul li:hover {
+        color: var(--rojo-umsa);
+      }
+      /* Footer */
+      footer {
+        background-color: var(--azul-umsa);
+        color: var(--blanco);
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 40px;
+      }
+      footer a {
+        color: var(--amarillo-umsa);
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: var(--blanco);
+      }
+      footer .social-icons {
+        margin-top: 10px;
+      }
+      footer .social-icons svg {
+        width: 70px;
+        height: 70px;
+        margin: 0 10px;
+      }
+      footer .social-icons svg path {
+        fill: var(--amarillo-umsa);
+      }
+      footer .social-icons svg:hover path {
+        fill: var(--blanco);
+      }
+
+      /* ===== Redes sociales con FontAwesome ===== */
+      .social-icons a {
+        color: var(--amarillo-umsa);
+        transition: 0.3s;
+      }
+      .social-icons a:hover {
+        color: var(--blanco);
+      }
+    </style>
+    <!-- FontAwesome para íconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ENCABEZADO -->
+    <div class="container-fluid text-center custom-header text-white">
+      <div class="row align-items-center">
+        <div class="col-lg-3 col-md-3 col-sm-3 images_logo">
+          <img
+            src="../img/logos/logoumsa.png"
+            alt="Facultad de Tecnología"
+            class="img-fluid"
+            width="50px"
+          />
+          <img
+            src="../img/logos/logo.png"
+            alt="PACIUM"
+            class="me-2 img-fluid"
+            width="80px"
+          />
+          <img
+            src="../img/logos/logo2.gif"
+            alt="Facultad de Tecnología"
+            class="img-fluid"
+            width="60px"
+          />
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <h1 class="text-white">Curso PACIUM</h1>
+        </div>
+
+        <!-- Redes sociales HEADER (FontAwesome) -->
+        <div class="col-lg-3 col-md-3 col-sm-3 social-icons mt-3 mt-md-0">
+          <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MENÚ -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-lg-none fw-bold" href="#">Curso PACIUM</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarMenu"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Acerca de</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mesa de ayuda</a>
+            </li>
+          </ul>
+          <div class="ms-auto d-flex align-items-center">
+            <a href="#" class="btn-register">Registrarse</a>
+            <a href="#" class="btn-login">Iniciar sesión</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container my-5">
+      <div class="row mb-4">
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+          <img
+            src="../img/cursos/logocurso_1.png"
+            alt="Curso PACIUM"
+            class="img-fluid rounded border border-2 border-primary"
+          />
+        </div>
+        <div class="col-lg-8">
+          <h2 class="main-title">Programa Nacional: Innovación Tecnológica</h2>
+          <div class="top-buttons mb-3">
+            <a href="#" class="btn btn-primary">Versión en español</a>
+            <a href="#" class="btn btn-primary">English version</a>
+          </div>
+          <p>
+            Este curso busca formar profesionales en áreas de innovación
+            tecnológica, impulsando el desarrollo sostenible, la transformación
+            digital y la modernización productiva.
+          </p>
+          <p>
+            Las crisis humanitarias (conflictos, epidemias sanitarias, desastres
+            socioambientales y los contextos migratorios) causan graves
+            sufrimientos psicológicos y sociales en las poblaciones afectadas.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+            quasi! Esse officiis accusantium id voluptates dolorem perferendis
+            fugiat nemo similique at corporis. Voluptatibus quod aliquam unde
+            sint!
+          </p>
+          <p>
+            Explicabo, veniam cumque accusamus excepturi magni reprehenderit hic
+            natus repellat voluptatem repellendus ducimus?
+          </p>
+        </div>
+        <h3>Destinatarios del curso</h3>
+        <p>
+          El curso está dirigido a todas aquellas personas que estén
+          involucradas en la respuesta de situaciones de emergencias
+          humanitarias y catástrofes.
+        </p>
+        <h3>Carga horaria</h3>
+        <ul>
+          <li>Cada módulo tiene diferentes tiempos de carga horaria.</li>
+          <li>Total de carga horaria: 5 años.</li>
+        </ul>
+        <h3>Estructura del curso</h3>
+        <p>
+          El curso consta de 6 módulos, cada uno con sus respectivos temas y
+          objetivos. A continuación, se detalla la estructura del curso:
+        </p>
+      </div>
+
+      <!-- MÓDULOS EN FILAS -->
+      <div class="row">
+        <!-- Módulo 1 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 1. Gestión de Innovación</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>4 meses</p>
+            </aside>
+            <div class="row">
+              <ol class="col-lg-12 col-md-12 col-sm-12">
+                <li
+                  onclick="navigateTo('investigacion-desarrollo-innovacion.html')"
+                >
+                  1. Investigación, desarrollo e innovación
+                </li>
+                <li
+                  onclick="navigateTo('gestion-industrial-robotica-autotronica.html')"
+                >
+                  2. Gestión industrial, robótica y autotrónica
+                </li>
+                <li onclick="navigateTo('proyectos-sostenibilidad.html')">
+                  3. Proyectos y sostenibilidad
+                </li>
+                <li onclick="navigateTo('emprendimiento-productivo.html')">
+                  4. Emprendimiento productivo
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 2 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 2. Técnico Auxiliar</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>5 meses</p>
+            </aside>
+            <div class="row">
+              <ol start="5" class="col-lg-12 col-md-12 col-sm-12">
+                <li
+                  onclick="navigateTo('diseno-industrial-robotica-autotronica.html')"
+                >
+                  5. Diseño industrial, robótica y autotrónica
+                </li>
+                <li onclick="navigateTo('geografia-infraestructura.html')">
+                  6. Geografía e infraestructura
+                </li>
+                <li onclick="navigateTo('medicina-tradicional-funcional.html')">
+                  7. Medicina tradicional y funcional
+                </li>
+                <li onclick="navigateTo('gestion-publica-agroindustria.html')">
+                  8. Gestión pública y agroindustria 2.0
+                </li>
+                <li
+                  onclick="navigateTo('informatica-navegacion-aplicada.html')"
+                >
+                  9. Informática y navegación aplicada
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 3 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 3. Técnico Básico</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <h6>1 año de estudio</h6>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>3 meses</p>
+            </aside>
+            <div class="row">
+              <ol start="10" class="col-lg-12 col-md-12 col-sm-12">
+                <li onclick="navigateTo('metodologias-investigacion.html')">
+                  10. Metodologías de investigación
+                </li>
+                <li onclick="navigateTo('perfil-investigacion.html')">
+                  11. Perfil de investigación
+                </li>
+                <li onclick="navigateTo('plan-negocios.html')">
+                  12. Plan de negocios
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 4 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 4. Técnico Medio</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <h6>2 años de estudio</h6>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>1 año</p>
+            </aside>
+            <div class="row">
+              <ol start="13" class="col-lg-12 col-md-12 col-sm-12">
+                <li onclick="navigateTo('desarrollo-innovacion.html')">
+                  13. Desarrollo de innovación
+                </li>
+                <li onclick="navigateTo('planificacion-desarrollo.html')">
+                  14. Planificación del desarrollo
+                </li>
+                <li onclick="navigateTo('taller-emprendimiento.html')">
+                  17. Taller de emprendimiento
+                </li>
+                <li onclick="navigateTo('planificacion-productiva.html')">
+                  18. Planificación productiva
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 5 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 5. Técnico Superior</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <h6>3 años de estudio</h6>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>1 año</p>
+            </aside>
+            <div class="row">
+              <ul
+                style="list-style: none; padding: 0; margin: 0"
+                class="col-lg-12 col-md-12 col-sm-12"
+              >
+                <li onclick="navigateTo('diseno-innovacion-aplicado.html')">
+                  2.5.1 Diseño e innovación aplicado
+                </li>
+                <li onclick="navigateTo('construccion-inteligente.html')">
+                  2.6 Construcción inteligente
+                </li>
+                <li onclick="navigateTo('aplicacion-plantas-medicinales.html')">
+                  2.7 Aplicación de plantas medicinales
+                </li>
+                <li onclick="navigateTo('construccion-maquinas.html')">
+                  2.8.1 Construcción de máquinas
+                </li>
+                <li
+                  onclick="navigateTo('programacion-emprendimiento-tesis.html')"
+                >
+                  2.9 Programación y emprendimiento/tesis
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 6 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 6. Licenciatura</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <h6>5 años de estudio</h6>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>2 años</p>
+            </aside>
+            <div class="row">
+              <ul
+                style="list-style: none; padding: 0; margin: 0"
+                class="col-lg-12 col-md-12 col-sm-12"
+              >
+                <li onclick="navigateTo('robotica-automatizacion.html')">
+                  3.4 Robótica y automatización
+                </li>
+                <li onclick="navigateTo('autotronica-diseno-industrial.html')">
+                  3.5 Autotrónica y diseño industrial
+                </li>
+                <li onclick="navigateTo('geografia-infraestructura.html')">
+                  3.6 Geografía e infraestructura
+                </li>
+                <li onclick="navigateTo('medicina-tradicional.html')">
+                  3.7 Medicina tradicional
+                </li>
+                <li onclick="navigateTo('agroindustria-2.html')">
+                  3.8 Agroindustria 2.0
+                </li>
+                <li
+                  onclick="navigateTo('informatica-navegacion-aplicada.html')"
+                >
+                  3.9 Informática y navegación aplicada
+                </li>
+                <li
+                  onclick="navigateTo('desarrollo-innovacion-tecnologica.html')"
+                >
+                  3.10 Desarrollo de innovación tecnológica
+                </li>
+                <li onclick="navigateTo('taller-tesis.html')">
+                  3.11 Taller de tesis
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 Curso PACIUM - Todos los derechos reservados. Desarrollado
+          por Josse Mamani Machaca.
+        </p>
+        <p>
+          Ofrecemos cursos virtuales de alta calidad en innovación tecnológica y
+          desarrollo sostenible.
+        </p>
+
+        <!-- Redes sociales FOOTER (FontAwesome) -->
+        <div class="social-icons">
+          <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+
+        <p>
+          <a href="#">Inicio</a> | <a href="#">Acerca de</a> |
+          <a href="#">Mesa de ayuda</a> | <a href="#">Contacto</a> |
+          <a href="#">Política de privacidad</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript para navegación -->
+    <script>
+      function navigateTo(page) {
+        window.location.href = page;
+      }
+    </script>
+  </body>
+</html>
