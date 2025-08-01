@@ -2,9 +2,52 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <!-- ✅ SEO: Ajusta la página al tamaño del dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Curso PACIUM</title>
+
+    <!-- ✅ SEO: Título de la página (máx 60 caracteres) -->
+    <title>Curso PACIUM - Innovación Tecnológica | UMSA</title>
+
+    <!-- ✅ SEO: Descripción de la página (máx 160 caracteres) -->
+    <meta
+      name="description"
+      content="Curso PACIUM de Innovación Tecnológica en la UMSA. Aprende sobre robótica, autotrónica, diseño industrial y más para el desarrollo sostenible."
+    />
+
+    <!-- ✅ SEO: Palabras clave relacionadas (Google ya casi no las usa, pero ayuda) -->
+    <meta
+      name="keywords"
+      content="Curso PACIUM, Innovación Tecnológica, UMSA, Robótica, Autotrónica, Agroindustria, Diseño Industrial, Carrera Universitaria"
+    />
+
+    <!-- ✅ SEO: Autor del sitio -->
+    <meta name="author" content="UMSA Facultad de Tecnología - Josse Mamani Machaca" />
+
+    <!-- ✅ SEO: Indica a Google que indexe la página -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- ✅ SEO: Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Curso PACIUM - Innovación Tecnológica" />
+    <meta
+      property="og:description"
+      content="Aprende Innovación Tecnológica, Robótica, Autotrónica y más con el curso PACIUM de la UMSA."
+    />
+    <meta property="og:image" content="https://tusitio.com/img/cursos/logocurso_1.png" />
+    <meta property="og:url" content="https://tusitio.github.io/curso-pacium/" />
+    <meta property="og:type" content="website" />
+
+    <!-- ✅ SEO: Twitter Card para compartir -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Curso PACIUM - Innovación Tecnológica" />
+    <meta
+      name="twitter:description"
+      content="Estudia innovación tecnológica, robótica, autotrónica y más con PACIUM UMSA."
+    />
+    <meta name="twitter:image" content="https://tusitio.com/img/cursos/logocurso_1.png" />
+
+    <!-- ✅ CSS principal -->
     <link href="bootstrap/style.css" rel="stylesheet" />
+
     <style>
       :root {
         --azul-umsa: #002855;
@@ -70,23 +113,20 @@
       }
     </style>
   </head>
+
   <body>
-    <!-- NAVBAR -->
+    <!-- ✅ SEO: Menú de navegación ayuda a Google a entender la estructura -->
     <nav class="navbar navbar-expand-lg navbar-dark" id="PACIUM">
       <div class="container-fluid">
         <div class="navbar-brand d-flex align-items-center gap-2">
           <a class="navbar-brand logo-ops" href="#">
-            <img
-              src="img/logos/logo.png"
-              alt="Logo PACIUM"
-              width="60"
-              height="60"
-            />
+            <img src="img/logos/logo.png" alt="Logo PACIUM UMSA" width="60" height="60" />
           </a>
-          <a href="https://ft.umsa.bo/" alt="Logo Facultad de tecnología">
+          <a href="https://ft.umsa.bo/" alt="Facultad de Tecnología UMSA">
             <img src="img/logos/logo2.gif" alt="Logo FT UMSA" width="50" />
           </a>
         </div>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -105,6 +145,7 @@
             <li class="nav-item"><a class="nav-link" href="#">Temas</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Países</a></li>
 
+            <!-- ✅ SEO: Dropdowns ayudan a jerarquizar el contenido -->
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -135,7 +176,7 @@
                 Noticias
               </a>
               <ul class="dropdown-menu" aria-labelledby="noticiasDropdown">
-                <li><a class="dropdown-item" href="#">Ultimas</a></li>
+                <li><a class="dropdown-item" href="#">Últimas</a></li>
                 <li><a class="dropdown-item" href="#">Eventos</a></li>
                 <li><a class="dropdown-item" href="#">Comunicados</a></li>
               </ul>
@@ -160,6 +201,7 @@
 
             <li class="nav-item">
               <a class="nav-link" href="#" aria-label="Buscar">
+                <!-- ✅ SVG accesible con aria-label -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -168,9 +210,7 @@
                   class="bi bi-search"
                   viewBox="0 0 16 16"
                 >
-                  <path
-                    d="M11 6a5 5 0 1 1-9.996.15A5 5 0 0 1 11 6zm-4 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
-                  />
+                  <path d="M11 6a5 5 0 1 1-9.996.15A5 5 0 0 1 11 6zm-4 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
                   <path
                     d="M16 15.293l-3.853-3.853a6.5 6.5 0 0 0 .708-1.061l3.603 3.604a1 1 0 1 1-1.414 1.414z"
                   />
@@ -182,14 +222,14 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- ✅ SEO: Usar <main> con títulos claros ayuda a Google a entender la jerarquía -->
     <main>
       <section class="container my-5">
         <div class="row align-items-center g-4">
           <div class="col-md-6">
             <img
               src="img/cursos/logocurso_1.png"
-              alt="Grupo de personas sonriendo"
+              alt="Estudiantes en curso de innovación tecnológica"
               class="img-fluid rounded"
             />
           </div>
@@ -198,15 +238,13 @@
               Programa nacional: Carrera Innovación Tecnológica
             </h1>
             <p>
-              Este curso tiene como objetivo proporcionar una visión integral
-              sobre los principios de la Innovación Tecnológica, abordando
-              diversas áreas estratégicas como la gestión pública, la robótica,
-              la autotrónica, el diseño industrial, la geografía, la medicina
-              tradicional, la agroindustria 2.0 y la informática aplicada a la
-              navegación. Está orientado a fortalecer capacidades que impulsen
-              el desarrollo sostenible, la modernización productiva y la
-              transformación digital, con un enfoque multidisciplinario y
-              contextualizado a las necesidades del entorno.
+              Este curso tiene como objetivo proporcionar una visión integral sobre los
+              principios de la Innovación Tecnológica, abordando diversas áreas estratégicas
+              como la gestión pública, la robótica, la autotrónica, el diseño industrial, la
+              geografía, la medicina tradicional, la agroindustria 2.0 y la informática aplicada
+              a la navegación. Está orientado a fortalecer capacidades que impulsen el desarrollo
+              sostenible, la modernización productiva y la transformación digital, con un enfoque
+              multidisciplinario y contextualizado a las necesidades del entorno.
             </p>
             <p><strong>Duración: 2 AÑOS</strong></p>
             <a
@@ -221,12 +259,11 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- ✅ SEO: Footer con información institucional y enlaces -->
     <footer>
       <div class="container">
         <p>
-          &copy; 2025 PACIUM - UMSA Facultad de Tecnología. Todos los derechos
-          reservados.
+          &copy; 2025 PACIUM - UMSA Facultad de Tecnología. Todos los derechos reservados.
         </p>
       </div>
     </footer>
