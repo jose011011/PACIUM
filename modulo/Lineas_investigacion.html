@@ -1,0 +1,570 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestrías UMSA - Facultad de Tecnología</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../CSS/estilos.css">
+  <style>
+    :root {
+      --azul-umsa: #002855;
+      --azul-tec: #005fa3;
+      --amarillo-umsa: #ffc107;
+      --rojo-umsa: #c8102e;
+      --gris-suave: #f5f5f5;
+      --texto-oscuro: #333333;
+      --blanco: #ffffff;
+      --azul-pastela: #2f527c;
+    }
+
+    * {
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: var(--gris-suave);
+      color: var(--texto-oscuro);
+    }
+
+    header {
+      background-color: #02458C;
+    }
+
+    .fonde_de_pantalla_img img {
+      background-color: #02458C;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .custom-header {
+      padding: 20px 0;
+      background-color: var(--azul-pastela);
+    }
+
+    .social-icons {
+      position: absolute;
+      top: 0;
+      right: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    .social-link {
+      margin-left: 10px;
+      color: #924343;
+    }
+
+    .images_logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 0 0 30px;
+    }
+
+    .logo-difuminado {
+      display: block;
+      padding: 5px;
+      max-height: 110px;
+      max-width: 150px;
+      filter: drop-shadow(0 0 5px rgb(255, 255, 255)) drop-shadow(0 0 15px rgb(255, 255, 255));
+    }
+
+    @media (max-width: 991px) {
+      .custom-header {
+        display: none;
+      }
+    }
+
+    .navbar {
+      background-color: var(--azul-umsa);
+      border-top: 5px solid var(--amarillo-umsa);
+      border-bottom: 3px solid var(--azul-umsa);
+    }
+
+    .navbar-nav .nav-link {
+      color: var(--blanco);
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: var(--amarillo-umsa);
+    }
+
+    .navbar-toggler {
+      border: 2px solid var(--amarillo-umsa);
+      border-radius: 5px;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffc107' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .main-content {
+      padding-top: 3rem;
+    }
+
+    .footer {
+      background: linear-gradient(to right, #bb2026, #024966);
+    }
+
+    .titulo {
+      color: #0c1d5c;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .subtitulo {
+      color: #b40000;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .magister li {
+      color: blue;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 22px;
+      background-color: #eee;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 10px;
+      margin: 0;
+    }
+
+    ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #003366;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+      color: #005599;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <!-- <header class="custom-header">
+    <div class="container d-flex justify-content-between align-items-center position-relative">
+      <!-- <div class="images_logo">
+        <img class="logo-difuminado" src="img/logo1.png" alt="Logo 1">
+        <img class="logo-difuminado" src="img/logo2.png" alt="Logo 2">
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social-link">🔗</a>
+        <a href="#" class="social-link">🔗</a>
+      </div>
+    </div> 
+  </header> -->
+
+  <!-- FONDO ENCABEZADO -->
+  <div class="fonde_de_pantalla_img">
+    <img src="../img/fondo_de_panatall.png" alt="Encabezado">
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">ACTIVIDADES</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Proyectos</a></li>
+              <li><a class="dropdown-item" href="#">Líneas de Investigación</a></li>
+              <li><a class="dropdown-item" href="#">Resultados</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">CATÁLOGO</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Maestrías</a></li>
+              <li><a class="dropdown-item" href="#">Doctorados</a></li>
+              <li><a class="dropdown-item" href="#">Diplomados</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">POS-DOCTORADO</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">EMPRENDIMIENTO</a></li>
+          <li class="nav-item"><a class="nav-link" href="modulo/contactos.html">CONTACTOS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- MENÚ -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-lg-none fw-bold text-white" href="#"
+          >CURSO PACIUM</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarMenu"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Acerca de</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mesa de ayuda</a>
+            </li>
+          </ul>
+          <div class="ms-auto d-flex align-items-center">
+            <a href="#" class="btn-register">Registrarse</a>
+            <a href="#" class="btn-login">Iniciar sesión</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container my-5">
+      <div class="row mb-4">
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+          <img
+            src="../img/cursos/logocurso_1.png"
+            alt="Curso PACIUM"
+            class="img-fluid rounded border border-2 border-primary"
+          />
+        </div>
+        <div class="col-lg-8">
+          <h2 class="main-title">Programa Nacional: Innovación Tecnológica</h2>
+          <div class="top-buttons mb-3">
+            <a href="#" class="btn btn-primary">Versión en español</a>
+            <a href="#" class="btn btn-primary">English version</a>
+          </div>
+          <p>
+            Este curso busca formar profesionales en áreas de innovación
+            tecnológica, impulsando el desarrollo sostenible, la transformación
+            digital y la modernización productiva.
+          </p>
+          <p>
+            Las crisis humanitarias (conflictos, epidemias sanitarias, desastres
+            socioambientales y los contextos migratorios) causan graves
+            sufrimientos psicológicos y sociales en las poblaciones afectadas.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+            quasi! Esse officiis accusantium id voluptates dolorem perferendis
+            fugiat nemo similique at corporis. Voluptatibus quod aliquam unde
+            sint!
+          </p>
+          <p>
+            Explicabo, veniam cumque accusamus excepturi magni reprehenderit hic
+            natus repellat voluptatem repellendus ducimus?
+          </p>
+        </div>
+        <h3>Destinatarios del curso</h3>
+        <p>
+          El curso está dirigido a todas aquellas personas que estén
+          involucradas en la respuesta de situaciones de emergencias
+          humanitarias y catástrofes.
+        </p>
+        <h3>Carga horaria</h3>
+        <ul>
+          <li>Cada módulo tiene diferentes tiempos de carga horaria.</li>
+          <li>Total de carga horaria: 5 años.</li>
+        </ul>
+        <h3>Estructura del curso</h3>
+        <p>
+          El curso consta de 6 módulos, cada uno con sus respectivos temas y
+          objetivos. A continuación, se detalla la estructura del curso:
+        </p>
+      </div>
+
+      <!-- MÓDULOS EN FILAS -->
+      <div class="row">
+        <!-- Módulo 1 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 1. Gestión de Innovación</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>4 meses</p>
+            </aside>
+            <div class="row">
+              <ol class="col-lg-12 col-md-12 col-sm-12">
+                <li
+                  onclick="navigateTo('investigacion-desarrollo-innovacion.html')"
+                >
+                  1. Investigación, desarrollo e innovación
+                </li>
+                <li
+                  onclick="navigateTo('gestion-industrial-robotica-autotronica.html')"
+                >
+                  2. Gestión industrial, robótica y autotrónica
+                </li>
+                <li onclick="navigateTo('proyectos-sostenibilidad.html')">
+                  3. Proyectos y sostenibilidad
+                </li>
+                <li onclick="navigateTo('emprendimiento-productivo.html')">
+                  4. Emprendimiento productivo
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 2 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 2. Técnico Auxiliar</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>5 meses</p>
+            </aside>
+            <div class="row">
+              <ol start="5" class="col-lg-12 col-md-12 col-sm-12">
+                <li
+                  onclick="navigateTo('diseno-industrial-robotica-autotronica.html')"
+                >
+                  5. Diseño industrial, robótica y autotrónica
+                </li>
+                <li onclick="navigateTo('geografia-infraestructura.html')">
+                  6. Geografía e infraestructura
+                </li>
+                <li onclick="navigateTo('medicina-tradicional-funcional.html')">
+                  7. Medicina tradicional y funcional
+                </li>
+                <li onclick="navigateTo('gestion-publica-agroindustria.html')">
+                  8. Gestión pública y agroindustria 2.0
+                </li>
+                <li
+                  onclick="navigateTo('informatica-navegacion-aplicada.html')"
+                >
+                  9. Informática y navegación aplicada
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 3 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 3. Técnico Básico</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <h6>1 año de estudio</h6>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>3 meses</p>
+            </aside>
+            <div class="row">
+              <ol start="10" class="col-lg-12 col-md-12 col-sm-12">
+                <li onclick="navigateTo('metodologias-investigacion.html')">
+                  10. Metodologías de investigación
+                </li>
+                <li onclick="navigateTo('perfil-investigacion.html')">
+                  11. Perfil de investigación
+                </li>
+                <li onclick="navigateTo('plan-negocios.html')">
+                  12. Plan de negocios
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 4 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 4. Técnico Medio</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <h6>2 años de estudio</h6>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>1 año</p>
+            </aside>
+            <div class="row">
+              <ol start="13" class="col-lg-12 col-md-12 col-sm-12">
+                <li onclick="navigateTo('desarrollo-innovacion.html')">
+                  13. Desarrollo de innovación
+                </li>
+                <li onclick="navigateTo('planificacion-desarrollo.html')">
+                  14. Planificación del desarrollo
+                </li>
+                <li onclick="navigateTo('taller-emprendimiento.html')">
+                  17. Taller de emprendimiento
+                </li>
+                <li onclick="navigateTo('planificacion-productiva.html')">
+                  18. Planificación productiva
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 5 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 5. Técnico Superior</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <h6>3 años de estudio</h6>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>1 año</p>
+            </aside>
+            <div class="row">
+              <ul
+                style="list-style: none; padding: 0; margin: 0"
+                class="col-lg-12 col-md-12 col-sm-12"
+              >
+                <li onclick="navigateTo('diseno-innovacion-aplicado.html')">
+                  2.5.1 Diseño e innovación aplicado
+                </li>
+                <li onclick="navigateTo('construccion-inteligente.html')">
+                  2.6 Construcción inteligente
+                </li>
+                <li onclick="navigateTo('aplicacion-plantas-medicinales.html')">
+                  2.7 Aplicación de plantas medicinales
+                </li>
+                <li onclick="navigateTo('construccion-maquinas.html')">
+                  2.8.1 Construcción de máquinas
+                </li>
+                <li
+                  onclick="navigateTo('programacion-emprendimiento-tesis.html')"
+                >
+                  2.9 Programación y emprendimiento/tesis
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 6 -->
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <div class="module-card">
+            <h4>Módulo 6. Licenciatura</h4>
+            <h5>(6 Áreas académicas)</h5>
+            <h6>5 años de estudio</h6>
+            <aside>
+              <h5>Tiempo</h5>
+              <p>2 años</p>
+            </aside>
+            <div class="row">
+              <ul
+                style="list-style: none; padding: 0; margin: 0"
+                class="col-lg-12 col-md-12 col-sm-12"
+              >
+                <li onclick="navigateTo('robotica-automatizacion.html')">
+                  3.4 Robótica y automatización
+                </li>
+                <li onclick="navigateTo('autotronica-diseno-industrial.html')">
+                  3.5 Autotrónica y diseño industrial
+                </li>
+                <li onclick="navigateTo('geografia-infraestructura.html')">
+                  3.6 Geografía e infraestructura
+                </li>
+                <li onclick="navigateTo('medicina-tradicional.html')">
+                  3.7 Medicina tradicional
+                </li>
+                <li onclick="navigateTo('agroindustria-2.html')">
+                  3.8 Agroindustria 2.0
+                </li>
+                <li
+                  onclick="navigateTo('informatica-navegacion-aplicada.html')"
+                >
+                  3.9 Informática y navegación aplicada
+                </li>
+                <li
+                  onclick="navigateTo('desarrollo-innovacion-tecnologica.html')"
+                >
+                  3.10 Desarrollo de innovación tecnológica
+                </li>
+                <li onclick="navigateTo('taller-tesis.html')">
+                  3.11 Taller de tesis
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Pie de Página -->
+    <footer class="py-4 text-white" style="background-color: #02458C; font-size: 0.9rem;">
+      <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+          <!-- Logo UMSA izquierda -->
+          <div class="col-md-2 mb-3 mb-md-0">
+            <img src="https://ft.umsa.bo/documents/20142/33077/blancopeq.png/36f4df4d-7c80-5bed-9451-b09907d7a286?t=1530311182334" alt="Escudo UMSA" class="img-fluid" style="max-height: 120px;">
+          </div>
+        
+          <!-- Texto institucional centro -->
+          <div class="col-md-8">
+            <p class="mb-1">
+              © DTIC - UNIVERSIDAD MAYOR DE SAN ANDRÉS, 2017 - 2025
+            </p>
+            <p class="mb-1">
+              Teléfono: (591 - 2) 2612298. E-mail: <a href="mailto:informate@umsa.bo" class="text-white">informate@umsa.bo</a>
+            </p>
+            <p class="mb-1">
+              Av. Villazón Nº 1995, Plaza del Bicentenario - Zona Central. Ciudad de La Paz. Estado Plurinacional de Bolivia
+            </p>
+            <br>
+            <p class="mb-1 fw-bold">
+              FACULTAD DE TECNOLOGÍA 2025
+            </p>
+            <p class="mb-1">
+              Teléfono: (591 - 2) 2442527 - 2442598
+            </p>
+            <p class="mb-0">
+              E-mail: <a href="mailto:ftdecano@correo.umsa.bo" class="text-white">ftdecano@correo.umsa.bo</a><br>
+              Av. Arce No. 2295
+            </p>
+          </div>
+        
+          <!-- Logo Tecnología derecha -->
+          <div class="col-md-2 mt-3 mt-md-0">
+            <img src="https://ft.umsa.bo/image/journal/article?img_id=11245097&t=1736294833276" alt="Logo Facultad de Tecnología" class="img-fluid" style="max-height: 100px;">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>

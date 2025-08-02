@@ -1,0 +1,111 @@
+
+    header, footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    nav {
+      background: #005599;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+    }
+    
+    
+    .de {
+      background: #555;
+    }
+
+    a {
+      display: block;
+      margin: 8px 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: sans-serif;
+      color: #024966;
+    }
+
+    a:hover {
+      color: #bb2026;
+    }
+    .mostaza {
+      color: #d4a017; 
+    }
+    .Super {
+      list-style: none;   
+      padding: 0;         
+      margin: 0;
+    }
+
+    .Super li {
+      color: rgb(3, 96, 153);           
+      text-decoration: none; 
+      font-family: sans-serif; 
+    }
+    
+    .izquierda {
+      width: 60%;
+      color: red;
+    }
+
+
+    .derecha {
+      width: 40%;
+    }
+
+    .derecha img {
+      max-width: 40%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .magister li,
+    .Super li {
+      color: #024966;
+      font-family: 'Nexa', Helvetica, Arial,sans-serif !important;
+      
+    }
+
+    .mostaza {
+      color: #d4a017;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+    }
+
+    td, th {
+      border: 2px solid  #024966;
+      padding: 6px;
+      vertical-align: top;
+    }
+
+    .titulo {
+      font-weight: bold;
+      color: red;
+    }
+
+    .dato {
+      color: red;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .imagen-centro {
+      display: block;
+      margin: 20px auto;
+      max-width: 300px;
+      height: auto;
+    }
+    
