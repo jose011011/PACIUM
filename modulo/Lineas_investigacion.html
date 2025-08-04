@@ -1,173 +1,179 @@
-  <!DOCTYPE html>
-  <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maestrías UMSA - Facultad de Tecnología</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="../CSS/estilos.css">
-  <style>
-    :root {
-      --azul-umsa: #002855;
-      --azul-tec: #005fa3;
-      --amarillo-umsa: #bb2026;
-      --rojo-umsa: #c8102e;
-      --gris-suave: #f5f5f5;
-      --texto-oscuro: #333333;
-      --blanco: #ffffff;
-      --azul-pastela: #2f527c;
-    }
-
-    * {
-      font-size: 16px;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: var(--gris-suave);
-      color: var(--texto-oscuro);
-    }
-
-    header {
-      background-color: #02458C;
-    }
-
-    .fonde_de_pantalla_img img {
-      background-color: #02458C;
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .custom-header {
-      padding: 20px 0;
-      background-color: var(--azul-pastela);
-    }
-
-    .social-icons {
-      position: absolute;
-      top: 0;
-      right: 60px;
-      display: flex;
-      align-items: center;
-    }
-
-    .social-link {
-      margin-left: 10px;
-      color: #924343;
-    }
-
-    .images_logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 0 0 0 30px;
-    }
-
-    .logo-difuminado {
-      display: block;
-      padding: 5px;
-      max-height: 110px;
-      max-width: 150px;
-      filter: drop-shadow(0 0 5px rgb(255, 255, 255)) drop-shadow(0 0 15px rgb(255, 255, 255));
-    }
-
-    @media (max-width: 991px) {
-      .custom-header {
-        display: none;
+    <link rel="stylesheet" href="../CSS/estilos.css" />
+    <style>
+      :root {
+        --azul-umsa: #002855;
+        --azul-tec: #005fa3;
+        --amarillo-umsa: #bb2026;
+        --rojo-umsa: #c8102e;
+        --gris-suave: #f5f5f5;
+        --texto-oscuro: #333333;
+        --blanco: #ffffff;
+        --azul-pastela: #2f527c;
       }
-    }
 
-    .navbar {
-      background-color: var(--azul-umsa);
-      border-top: 5px solid var(--amarillo-umsa);
-      border-bottom: 3px solid var(--azul-umsa);
-    }
+      * {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .navbar-nav .nav-link {
-      color: var(--blanco);
-      font-weight: bold;
-    }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: var(--gris-suave);
+        color: var(--texto-oscuro);
+      }
 
-    .navbar-nav .nav-link:hover {
-      color: var(--amarillo-umsa);
-    }
+      header {
+        background-color: #02458c;
+      }
 
-    .navbar-toggler {
-      border: 2px solid var(--amarillo-umsa);
-      border-radius: 5px;
-    }
+      .fonde_de_pantalla_img img {
+        background-color: #02458c;
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffc107' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
+      .custom-header {
+        padding: 20px 0;
+        background-color: var(--azul-pastela);
+      }
 
-    .main-content {
-      padding-top: 3rem;
-    }
+      .social-icons {
+        position: absolute;
+        top: 0;
+        right: 60px;
+        display: flex;
+        align-items: center;
+      }
 
-    .footer {
-      background: linear-gradient(to right, #bb2026, #024966);
-    }
+      .social-link {
+        margin-left: 10px;
+        color: #924343;
+      }
 
-    .titulo {
-      color: #0c1d5c;
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+      .images_logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 0 0 30px;
+      }
 
-    .subtitulo {
-      color: #b40000;
-      font-size: 24px;
-      font-weight: bold;
-      line-height: 1.3;
-      text-transform: uppercase;
-    }
+      .logo-difuminado {
+        display: block;
+        padding: 5px;
+        max-height: 110px;
+        max-width: 150px;
+        filter: drop-shadow(0 0 5px rgb(255, 255, 255))
+          drop-shadow(0 0 15px rgb(255, 255, 255));
+      }
 
-    .magister li {
-      color: blue;
-    }
+      @media (max-width: 991px) {
+        .custom-header {
+          display: none;
+        }
+      }
 
-    h2 {
-      margin-top: 0;
-      font-size: 22px;
-      background-color: #eee;
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-    }
+      .navbar {
+        background-color: var(--azul-umsa);
+        border-top: 5px solid var(--amarillo-umsa);
+        border-bottom: 3px solid var(--azul-umsa);
+      }
 
-    ul {
-      list-style: none;
-      padding-left: 10px;
-      margin: 0;
-    }
+      .navbar-nav .nav-link {
+        color: var(--blanco);
+        font-weight: bold;
+      }
 
-    ul li {
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
-    }
+      .navbar-nav .nav-link:hover {
+        color: var(--amarillo-umsa);
+      }
 
-    ul li a {
-      text-decoration: none;
-      color: #003366;
-    }
+      .navbar-toggler {
+        border: 2px solid var(--amarillo-umsa);
+        border-radius: 5px;
+      }
 
-    ul li a:hover {
-      text-decoration: underline;
-      color: #005599;
-    }
-  </style>
-</head>
-<body>
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffc107' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
 
-  <!-- HEADER -->
-  <!-- <header class="custom-header">
+      .main-content {
+        padding-top: 3rem;
+      }
+
+      .footer {
+        background: linear-gradient(to right, #bb2026, #024966);
+      }
+
+      .titulo {
+        color: #0c1d5c;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .subtitulo {
+        color: #b40000;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+
+      .magister li {
+        color: blue;
+      }
+
+      h2 {
+        margin-top: 0;
+        font-size: 22px;
+        background-color: #eee;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 10px;
+        margin: 0;
+      }
+
+      ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #003366;
+      }
+
+      ul li a:hover {
+        text-decoration: underline;
+        color: #005599;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <!-- <header class="custom-header">
     <div class="container d-flex justify-content-between align-items-center position-relative">
       <!-- <div class="images_logo">
         <img class="logo-difuminado" src="img/logo1.png" alt="Logo 1">
@@ -180,46 +186,76 @@
     </div> 
   </header> -->
 
-  <!-- FONDO ENCABEZADO -->
-  <div class="fonde_de_pantalla_img">
-    <img src="../img/fondo_de_panatall.png" alt="Encabezado">
-  </div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">ACTIVIDADES</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Proyectos</a></li>
-              <li><a class="dropdown-item" href="#">Líneas de Investigación</a></li>
-              <li><a class="dropdown-item" href="#">Resultados</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">CATÁLOGO</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Maestrías</a></li>
-              <li><a class="dropdown-item" href="#">Doctorados</a></li>
-              <li><a class="dropdown-item" href="#">Diplomados</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">POS-DOCTORADO</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">EMPRENDIMIENTO</a></li>
-          <li class="nav-item"><a class="nav-link" href="modulo/contactos.html">CONTACTOS</a></li>
-        </ul>
-      </div>
+    <!-- FONDO ENCABEZADO -->
+    <div class="fonde_de_pantalla_img">
+      <img src="../img/fondo_de_panatall.png" alt="Encabezado" />
     </div>
-  </nav>
 
-<!-- MENÚ -->
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >ACTIVIDADES</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Proyectos</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Líneas de Investigación</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Resultados</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >CATÁLOGO</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Maestrías</a></li>
+                <li><a class="dropdown-item" href="#">Doctorados</a></li>
+                <li><a class="dropdown-item" href="#">Diplomados</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">POS-DOCTORADO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">EMPRENDIMIENTO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="modulo/contactos.html">CONTACTOS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MENÚ -->
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container">
         <a class="navbar-brand d-lg-none fw-bold text-white" href="#"
@@ -521,50 +557,64 @@
       </div>
     </div>
 
-
     <!-- Pie de Página -->
-    <footer class="py-4 text-white" style="background-color: #02458C; font-size: 0.9rem;">
+    <footer
+      class="py-4 text-white"
+      style="background-color: #02458c; font-size: 0.9rem"
+    >
       <div class="container">
         <div class="row align-items-center text-center text-md-start">
           <!-- Logo UMSA izquierda -->
           <div class="col-md-2 mb-3 mb-md-0">
-            <img src="https://ft.umsa.bo/documents/20142/33077/blancopeq.png/36f4df4d-7c80-5bed-9451-b09907d7a286?t=1530311182334" alt="Escudo UMSA" class="img-fluid" style="max-height: 120px;">
+            <img
+              src="https://ft.umsa.bo/documents/20142/33077/blancopeq.png/36f4df4d-7c80-5bed-9451-b09907d7a286?t=1530311182334"
+              alt="Escudo UMSA"
+              class="img-fluid"
+              style="max-height: 120px"
+            />
           </div>
-        
+
           <!-- Texto institucional centro -->
           <div class="col-md-8">
             <p class="mb-1">
               © DTIC - UNIVERSIDAD MAYOR DE SAN ANDRÉS, 2017 - 2025
             </p>
             <p class="mb-1">
-              Teléfono: (591 - 2) 2612298. E-mail: <a href="mailto:informate@umsa.bo" class="text-white">informate@umsa.bo</a>
+              Teléfono: (591 - 2) 2612298. E-mail:
+              <a href="mailto:informate@umsa.bo" class="text-white"
+                >informate@umsa.bo</a
+              >
             </p>
             <p class="mb-1">
-              Av. Villazón Nº 1995, Plaza del Bicentenario - Zona Central. Ciudad de La Paz. Estado Plurinacional de Bolivia
+              Av. Villazón Nº 1995, Plaza del Bicentenario - Zona Central.
+              Ciudad de La Paz. Estado Plurinacional de Bolivia
             </p>
-            <br>
-            <p class="mb-1 fw-bold">
-              FACULTAD DE TECNOLOGÍA 2025
-            </p>
-            <p class="mb-1">
-              Teléfono: (591 - 2) 2442527 - 2442598
-            </p>
+            <br />
+            <p class="mb-1 fw-bold">FACULTAD DE TECNOLOGÍA 2025</p>
+            <p class="mb-1">Teléfono: (591 - 2) 2442527 - 2442598</p>
             <p class="mb-0">
-              E-mail: <a href="mailto:ftdecano@correo.umsa.bo" class="text-white">ftdecano@correo.umsa.bo</a><br>
+              E-mail:
+              <a href="mailto:ftdecano@correo.umsa.bo" class="text-white"
+                >ftdecano@correo.umsa.bo</a
+              ><br />
               Av. Arce No. 2295
             </p>
           </div>
-        
+
           <!-- Logo Tecnología derecha -->
           <div class="col-md-2 mt-3 mt-md-0">
-            <img src="https://ft.umsa.bo/image/journal/article?img_id=11245097&t=1736294833276" alt="Logo Facultad de Tecnología" class="img-fluid" style="max-height: 100px;">
+            <img
+              src="https://ft.umsa.bo/image/journal/article?img_id=11245097&t=1736294833276"
+              alt="Logo Facultad de Tecnología"
+              class="img-fluid"
+              style="max-height: 100px"
+            />
           </div>
         </div>
       </div>
     </footer>
 
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-  </html>
+</html>
