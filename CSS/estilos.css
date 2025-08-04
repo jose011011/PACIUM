@@ -59,7 +59,7 @@ p {
 }
 header {
   background-color: #02458c;
-  font-size: 11px;
+  font-size: 12px;
   display: flex; /* Activamos Flexbox */
   justify-content: flex-end; /* Mueve el contenido a la derecha */
   align-items: end; /* Centra verticalmente */
