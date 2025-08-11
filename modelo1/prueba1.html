@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PACIUM</title>
+    <title>Maestrías UMSA - Facultad de Tecnología</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,16 +13,12 @@
       rel="stylesheet"
     />
     <!-- CSS Personalizado -->
-    <style>
-      .header {
-        background-color: #02458c; /* Color de fondo del encabezado */
-        font-size: 11px;
-      }
 
-      .fonde_de_pantalla_img img {
-        width: 100%;
-        height: auto;
-        display: block;
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
       }
 
       .navbar-nav .nav-link {
@@ -36,33 +32,146 @@
         color: var(--amarillo-umsa);
       }
 
-      .navbar-toggler {
-        border: none; /* Eliminar borde del botón de la barra de navegación */
+      .btn-access-course {
+        background-color: var(--azul-umsa);
+        color: var(--blanco);
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.3rem;
+        border: none;
       }
-      /*desde aqui */
+
+      .btn-access-course:hover {
+        background-color: var(--amarillo-umsa);
+        color: var(--azul-umsa);
+      }
+
+      .course-title {
+        font-weight: 700;
+        color: var(--azul-tec);
+      }
+
+      .logo-ops img {
+        max-height: 60px;
+      }
+
+      h2 {
+        margin-top: 0;
+        font-size: 22px;
+        background-color: #eee;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 10px;
+        margin: 0;
+      }
+
       ul li {
         padding: 10px 0;
         border-bottom: 1px solid #eee;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #003366;
       }
 
       ul li a:hover {
         text-decoration: underline;
         color: #005599;
       }
-      /*esto es que le da es linea de abajo a cada item del menu*/
 
-      .navbar-dark .navbar-toggler-icon {
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.5
-        ); /* Color del icono del botón */
+      p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        unicode-bidi: isolate;
+      }
+
+      .titulo {
+        color: #0c1d5c;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .subtitulo {
+        color: #b40000;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+
+      .magister li {
+        color: blue;
+      }
+
+      header {
+        background-color: #02458c;
+        font-size: 10px;
+        display: flex; /* Activamos Flexbox */
+        justify-content: flex-end; /* Mueve el contenido a la derecha */
+        align-items: end; /* Centra verticalmente */
+      }
+
+      .nav-bar {
+        display: flex;
+        font-size: 10px;
+      }
+
+      .fonde_de_pantalla_img img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .footer-logo-left {
+        bottom: 0;
+        left: 0;
+      }
+
+      .footer-logo-right {
+        bottom: 0;
+        right: 0;
+      }
+
+      .social-icons {
+        position: absolute;
+        top: 0;
+        right: 60px;
+      }
+
+      .social-link {
+        margin-left: 10px;
+        color: #924343;
+      }
+
+      .main-content {
+        padding-top: 3rem;
+      }
+
+      .titul {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .subtitul {
+        font-size: 1.2rem;
+      }
+
+      .footer {
+        background: linear-gradient(to right, #bb2026, #024966);
       }
     </style>
   </head>
   <body>
-    <!-- encabezado de la pagina  -->
     <header class="header position-relative">
       <div class="fonde_de_pantalla_img">
         <img
@@ -197,7 +306,8 @@
         </div>
       </nav>
     </header>
-    <!-- cuerpo de la pagina  -->
+
+    <!-- Contenido Principal -->
     <main>
       <section class="container my-5">
         <div class="row align-items-center g-4">
