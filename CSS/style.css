@@ -1,0 +1,565 @@
+:root {
+  --blanco: #ffffff;
+  --amarillo-umsa: #ffd200;
+  --azul-principal: #02458c;
+  --rojo-borde: #c8102e;
+  --text-dark: #333333;
+}
+
+.header {
+  background-color: var(--azul-principal);
+  font-size: 11px;
+  position: relative;
+}
+
+.fonde_de_pantalla_img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--blanco);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--amarillo-umsa);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+  color: #005599;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px;
+    border-bottom: 4px solid var(--rojo-borde);
+    transition: all 0.3s ease;
+    height: 100px;
+  }
+
+  .header.menu-open {
+    height: auto;
+  }
+
+  .fonde_de_pantalla_img {
+    display: none;
+  }
+
+  .navbar.navbar-expand-lg {
+    display: none !important; /* Oculta completamente el nav de Bootstrap */
+  }
+
+  .navbar-toggler,
+  .navbar-collapse,
+  .navbar-nav,
+  .nav-item,
+  .nav-link,
+  .dropdown-menu {
+    display: none !important; /* Oculta todos los elementos de Bootstrap */
+  }
+
+  .mobile-navbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .mobile-logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-logo {
+    font-size: 20px;
+    color: var(--blanco);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+  }
+
+  .mobile-site-name {
+    color: var(--blanco);
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Arial", sans-serif;
+  }
+
+  .mobile-navbar-toggler {
+    display: block;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .mobile-navbar-toggler-icon {
+    width: 28px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mobile-navbar-toggler-icon span {
+    display: block;
+    height: 3px;
+    background-color: var(--blanco);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-navbar-toggler.menu-open
+    .mobile-navbar-toggler-icon
+    span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-navbar-toggler.menu-open
+    .mobile-navbar-toggler-icon
+    span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-navbar-toggler.menu-open
+    .mobile-navbar-toggler-icon
+    span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .mobile-navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--azul-principal);
+    padding: 10px;
+  }
+
+  .mobile-navbar-menu.active {
+    display: flex;
+  }
+
+  .mobile-navbar-menu ul {
+    list-style: none;
+  }
+
+  .mobile-navbar-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .mobile-navbar-menu a {
+    display: block;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    font-size: 11px;
+    font-family: "Arial", sans-serif;
+    transition: background-color 0.2s ease;
+  }
+
+  .mobile-navbar-menu a:hover {
+    background-color: #0051a0;
+    color: var(--amarillo-umsa);
+    text-decoration: none;
+  }
+
+  .mobile-dropdown {
+    position: relative;
+  }
+
+  .mobile-dropdown-toggle::after {
+    content: "▼";
+    margin-left: 8px;
+    font-size: 10px;
+    vertical-align: middle;
+  }
+
+  .mobile-dropdown-menu {
+    display: none;
+    background-color: #002b6e;
+    padding: 10px 0;
+  }
+
+  .mobile-dropdown.active .mobile-dropdown-menu {
+    display: block;
+  }
+
+  .mobile-dropdown-menu a {
+    font-size: 11px;
+    padding-left: 30px;
+  }
+
+  .mobile-only-text {
+    display: block;
+    color: var(--blanco);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #002b6e;
+    margin: 10px auto;
+    max-width: 100%;
+    font-family: "Arial", sans-serif;
+  }
+}
+
+/* Ocultar menú móvil en pantallas grandes */
+@media (min-width: 769px) {
+  .mobile-navbar-header,
+  .mobile-navbar-menu,
+  .mobile-only-text {
+    display: none;
+  }
+}
+
+/*ESTILOS DE FOOTER */
+
+/* Estilos para el footer principal */
+#footerx {
+  border-radius: 0 0 6px 6px;
+  text-align: right;
+  font-size: 11px;
+  margin: 0;
+  background: #0051a0;
+  background-repeat: repeat;
+  background-size: 80px;
+  color: #e60101;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Estilos para los enlaces dentro del footer */
+#footerx a {
+  color: white;
+}
+
+/* Clase para la información de la unidad */
+.infor-unidad {
+  width: 40%;
+  padding-right: 15px;
+}
+
+/* Estilos para texto en negrita en el footer */
+.foo-info {
+  font-weight: bold;
+  color: #fff;
+}
+
+.foo-info a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer-copyright {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Estilos para el contenedor de redes sociales */
+.containersocial {
+  margin: 0;
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 12px;
+}
+
+/* Estilos para el accordion */
+.accordion {
+  background: #dbe6f3;
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  overflow: hidden;
+  height: 45px;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+/* Estilos para cada tab */
+.accordion .tab {
+  display: flex;
+  align-items: center;
+  border-right: #dbe6f3 3px solid;
+  width: 60px;
+  height: 45px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  transition: width 0.5s ease-in-out 0.1s, background-color 0.3s ease;
+  background-color: #024966;
+  border-radius: 22.5px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el tab fijo "SÍGUENOS EN" */
+.accordion .tabx {
+  display: flex;
+  align-items: center;
+  background-color: #024966;
+  border-right: #dbe6f3 3px solid;
+  width: 150px;
+  height: 45px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  color: white;
+  padding-left: 0;
+  border-radius: 22.5px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.accordion .tabx p {
+  font-size: 1.5rem;
+  margin: 0;
+  color: white;
+  padding: 0;
+  line-height: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Al hover, el tab se expande y cambia color */
+.accordion .tab:hover {
+  width: 300px;
+  background-color: #01364d;
+}
+
+/* Estilos para el contenedor del ícono social */
+.social {
+  width: 60px;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  text-indent: 0;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.accordion .tab:hover .social img {
+  transform: scale(1.1);
+}
+
+/* Contenido que se muestra al expandir el tab */
+.accordion .tab .content {
+  background: #fff;
+  flex-grow: 1;
+  width: 240px;
+  height: 100%;
+  padding: 1px 0 0 15px;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 2;
+}
+
+.accordion .tab:hover .content {
+  opacity: 1;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.accordion .tab .content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+}
+
+.accordion .tab .content p {
+  font-size: 1.25rem;
+  line-height: 1.4rem;
+  padding-right: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #666;
+}
+
+/* Colores específicos al hover para cada red social */
+.tab:hover .social.youtube {
+  background-color: red;
+}
+
+.tab:hover .social.twitter {
+  background-color: #6dc5dd;
+}
+
+.tab:hover .social.facebook {
+  background-color: #3b5998;
+}
+
+.tab:hover .social.instagram {
+  background-color: #e4405f;
+}
+
+.tab:hover .social.github {
+  background-color: #6e5494;
+}
+
+.tab:hover .social.gmap {
+  background-color: #de4c40;
+}
+
+/* Media query para pantallas menores a 950px */
+@media (max-width: 950px) {
+  .containersocial {
+    width: 100%;
+    border-radius: 0;
+  }
+  .accordion {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    height: auto;
+    padding: 10px;
+  }
+  .accordion .tabx {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 0;
+    height: 50px;
+    padding: 0;
+    border-radius: 22.5px;
+    margin-bottom: 10px;
+  }
+  .accordion .tabx p {
+    font-size: 1.1em;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .accordion .tab {
+    width: calc(50% - 10px);
+    border-right: 0;
+    border-bottom: 0;
+    height: auto;
+    overflow: hidden;
+    flex-direction: row;
+    border-radius: 22.5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .accordion .tab:hover {
+    width: calc(50% - 10px);
+    background-color: #043045;
+  }
+  .social {
+    width: auto;
+    height: 100%;
+    position: static;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    text-indent: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    position: static;
+    font-size: 0.9em;
+  }
+  .social a img {
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+  }
+  .accordion .tab .content {
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 0 0 15px !important;
+    background: transparent !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: normal !important;
+    margin: 0 !important;
+  }
+  .accordion .tab .content h1 {
+    font-size: 1.2rem;
+    color: #fff;
+    white-space: normal;
+    overflow: visible;
+  }
+  .accordion .tab .content p {
+    font-size: 1rem;
+    color: #ddd;
+    white-space: normal;
+    overflow: visible;
+    padding-right: 0;
+  }
+  .accordion .tab:hover .content {
+    background: transparent;
+  }
+}
