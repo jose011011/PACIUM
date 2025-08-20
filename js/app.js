@@ -36,3 +36,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//fuciones de header
+// Deshabilitar funcionalidad de Bootstrap en móviles
+document.addEventListener("DOMContentLoaded", () => {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  if (isMobile) {
+    const navbarTogglers = document.querySelectorAll(".navbar-toggler");
+    navbarTogglers.forEach((toggler) => {
+      toggler.setAttribute("data-bs-toggle", "");
+      toggler.setAttribute("data-bs-target", "");
+      toggler.style.display = "none";
+    });
+  }
+});
+
+const toggler = document.querySelector(".mobile-navbar-toggler");
+const menu = document.querySelector(".mobile-navbar-menu");
+const header = document.querySelector(".header");
+const dropdownToggles = document.querySelectorAll(".mobile-dropdown-toggle");
+
+toggler.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  toggler.classList.toggle("menu-open");
+  header.classList.toggle("menu-open");
+});
+
+dropdownToggles.forEach((toggle) => {
+  toggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    const dropdown = toggle.parentElement;
+    dropdown.classList.toggle("active");
+  });
+});
+//fin de funciones de header
